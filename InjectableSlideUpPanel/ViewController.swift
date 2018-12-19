@@ -6,7 +6,7 @@
 //  Copyright © 2018 ali ziwa. All rights reserved.
 //
 
-import UIKit
+import Slidable
 
 class ViewController: SlidableController {
 
@@ -15,6 +15,5 @@ class ViewController: SlidableController {
         isSlideInteractable = true
         addSlidable(ImplementorController(), forState: .collapsed)
     }
-    
 }
 

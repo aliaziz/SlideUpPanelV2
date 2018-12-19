@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum SlidableState: Int {
+public enum SlidableState: Int {
     typealias divisor = CGFloat
     
     case collapsed
@@ -24,13 +24,13 @@ enum SlidableState: Int {
     }
 }
 
-class SlidableController: UIViewController {
+open class SlidableController: UIViewController {
     private(set) var slidingController: UIViewController!
     private var animator: UIViewPropertyAnimator!
     private var slideState: SlidableState!
-    var isSlideInteractable: Bool = false
+    open var isSlideInteractable: Bool = false
     
-    func addSlidable(_ childController: UIViewController, forState: SlidableState) {
+    open func addSlidable(_ childController: UIViewController, forState: SlidableState) {
         initialiseAnimation()
         slidingController = childController
         addChild(childController)
